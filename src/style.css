@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import "tailwindcss";
+
+
+
+@theme {
+  --font-loster : 'Lobster', cursive;
+}
+
+header nav label .fa-bars{
+  display: none;
+}
+header nav label .fa-xmark {
+  display: none;
+}
+
+header section .btn1{
+  @apply bg-amber-400 text-xl font-semibold px-5 py-3 border border-amber-400 rounded-xl cursor-pointer ;
+  &:hover{
+    @apply bg-transparent text-amber-400;
+  }
+    &:active {
+      @apply bg-transparent text-amber-400;
+    }
+}
+header section .btn2 {
+  @apply bg-transparent text-xl font-semibold px-5 py-3 border border-amber-400 rounded-xl cursor-pointer;
+
+  &:hover {
+    @apply bg-amber-400;
+  }
+    &:active {
+      @apply bg-amber-400;
+    }
+}
+header section .icons{
+  @apply flex gap-6 text-3xl cursor-pointer;
+  & i:hover{
+    @apply text-amber-400;
+  } 
+    & i:active {
+      @apply text-amber-400;
+    }
+}
+header section figure i{
+  @apply text-amber-400 opacity-20
+}
+header section figure::before{
+  content: '';
+  @apply absolute w-[400px] h-[400px] top-[20%] left-[-50%]  rounded-full  ;
+  background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.171) 0%, rgba(255, 255, 255, 0) 100% , transparent );
+  box-shadow: 0px 0px 400px rgba(255, 255, 255, 0.171);
+  z-index: 1;
+}
+header section figure::after {
+  content: '';
+  @apply absolute w-[400px] h-[400px] bottom-[-20%] right-[-30%] rounded-full;
+  background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.171) 0%, rgba(255, 255, 255, 0) 100%, transparent);
+  box-shadow: 0px 0px 400px rgba(255, 255, 255, 0.171);
+  z-index: 1;
+}
+header section figure img{
+  animation: imagesHome 1s ease-out ;
+}
+header section > div{
+  @apply relative z-10;
+  animation: textHome 1s ease-out ;
+}
+header section figure .bx-leaf {
+  animation: scaleicon 1s ease-in-out infinite alternate;
+  animation-delay: 0.2s;
+}
+header section figure .bx-plant-pot {
+  animation: bounceicon 1s ease-in-out infinite alternate;
+  animation-delay: 0.4s;
+}
+header section figure .bx-florist {
+  animation: spinicon 6s linear infinite ;
+  animation-delay: 0.6s;
+}
+
+main section:first-child > div{
+  position: relative;
+  opacity: 1;
+}
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+/*
+animation: teHome 1s ease-out;
+animation-fill-mode: both;
+@keyframes teHome {
+  0% {
+    top: -30%;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+} */
+
+@keyframes spinicon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes scaleicon {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  } 
+}
+@keyframes bounceicon {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-30%);
+  }
+}
+
+
+@keyframes imagesHome {
+  0% {
+    right: -30%;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+@keyframes textHome {
+  0% {
+    top: -20%;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+
+@media (max-width:1024px){
+  header nav label .fa-bars {
+      display: inline-block;
+  }
+    header nav input:checked ~ label .fa-bars{
+      display: none;
+    }
+        header nav input:checked~label .fa-xmark {
+          display: inline-block;
+        }
+}
+
+.swiper-pagination-bullet {
+  background: #fbbf24;
+  /* amber-400 */
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+.cards > div:hover img{
+  top: -65%;
+  transition: 0.5s;
+}
