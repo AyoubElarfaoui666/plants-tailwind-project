@@ -14,7 +14,7 @@
       <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
   </head>
   <body class="overflow-x-hidden">
-    <header class="min-h-screen max-lg:px-[5%] relative w-screen overflow-hidden bg-green-950 text-white px-[10%]">
+    <header id="#home" class="min-h-screen max-lg:px-[5%] relative w-screen overflow-hidden bg-green-950 text-white px-[10%]">
       <nav class="flex mb-10 justify-between items-center py-3">
         <a href="#" class="font-loster text-4xl font-black">IndorePlants.</a>
         <input type="checkbox" id="icon" class="hidden peer ">
@@ -24,11 +24,11 @@
         </label>
 
         
-        <ul class="flex max-lg:flex-col [&>li]:py-5 [&>li]:cursor-pointer transition-all  duration-1000 [&>li:hover]:max-lg:bg-white [&>li:hover]:max-lg:text-amber-400 max-lg:gap-0 peer-checked:left-0 max-lg:w-full max-lg:absolute max-lg:top-20 max-lg:left-[100%] [&>li]:flex [&>li]:justify-center gap-10 text-2xl [&>li>a:hover]:text-amber-400 font-semibold backdrop-blur-xl">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Popular</a></li>
-          <li><a href="#">Review</a></li>
+        <ul class="flex max-lg:flex-col [&>li]:py-5 [&>li]:cursor-pointer transition-all  duration-1000 [&>li:hover]:max-lg:bg-white [&>li:hover]:max-lg:text-amber-400 max-lg:gap-0 peer-checked:left-0 max-lg:w-full max-lg:absolute max-lg:top-20 max-lg:left-[100%] [&>li]:flex [&>li]:justify-center gap-10 text-2xl [&>li>a:hover]:text-amber-400 font-semibold z-96 !backdrop-blur-xl">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#popular">Popular</a></li>
+          <li><a href="#review">Review</a></li>
         </ul>
       </nav>
       <section class="flex max-xl:flex-col justify-between items-center">
@@ -89,7 +89,7 @@
           </p>
         </div>
       </section>
-      <section class="lg:px-[10%] md:px-10 py-20 bg-green-950 text-white">
+      <section id="#about" class="lg:px-[10%] md:px-10 py-20 bg-green-950 text-white">
         <div class="text-center mb-20">
           <h2 class="font-loster mb-3 text-5xl text-amber-400">About Us</h2>
           <p class="text-xl">Folow instruction for more</p>
@@ -116,7 +116,7 @@
           </figure>
         </div>
       </section>
-      <section class="lg:px-[10%] md:px-10 px-[5%] py-20 bg-green-900 text-white">
+      <section id="#popular" class="lg:px-[10%] md:px-10 px-[5%] py-20 bg-green-900 text-white">
         <div data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0" class="text-center mb-20">
           <h2 class="font-loster mb-3 text-5xl text-amber-400">Your Choice Plant</h2>
           <p class="text-xl">Folow instruction for more</p>
@@ -188,7 +188,7 @@
           </div>
         </div>
       </section>
-      <section class="lg:px-[10%]  pb-60 md:px-10 px-[5%] py-20 bg-green-950 text-white">
+      <section id="#review" class="lg:px-[10%]  pb-60 md:px-10 px-[5%] py-20 bg-green-950 text-white">
         <div data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0" class="text-center mb-20">
           <h2 class="font-loster mb-3 text-5xl text-amber-400">Customer Review</h2>
           <p class="text-xl">Follow instruction for more</p>
